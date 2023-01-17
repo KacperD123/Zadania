@@ -427,3 +427,33 @@ int main()
     task_4();
 
 }
+//2. Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+void task6()
+{
+    string slowo;
+    int i, j;
+
+    cout << "Podaj wyraz,chcesz sprawdzic: "<< endl;
+    cin >> slowo;
+
+    for (i = 0, j = slowo.length() - 1; i < j; i++, j--)
+    {
+        if (slowo[i] != slowo[j])
+            break;
+    }
+    if (i < j)
+        cout << "Podany wyraz nie jest palindronem" << endl;
+    else
+        cout << "Podany wyraz jest palindronem" << endl;
+}
+//3. Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
+
+void task7()
+{
+    string slowo;
+    int i, j;
+
+    cout << "Podaj wyraz do sprawdzenia: " << endl;
+    cin >> slowo;
+    for(i=0,j )
+}
