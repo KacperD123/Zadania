@@ -1,3 +1,4 @@
+
 //LotOfTasks
 
 /*Podstawy programowania:
@@ -288,7 +289,7 @@ void task13()
 
 }
 void task14()
-/*Program sprawdzaj¹cy czy podane has³o jest poprawne
+/*5.Program sprawdzaj¹cy czy podane has³o jest poprawne
 (np. jeœli has³o jest "abc123", program powinien wyœwietliæ "has³o poprawne", jeœli jest inne, powinien wyœwietliæ "has³o niepoprawne").*/
 {
     string password;
@@ -320,7 +321,7 @@ void task15()
     else
         cout<<"Podana data jest niepoprawna!"<<endl;
 }
-/*Program wyœwietlaj¹cy odpowiedni komunikat w zale¿noœci od podanej temperatury
+/*7.Program wyœwietlaj¹cy odpowiedni komunikat w zale¿noœci od podanej temperatury
 (np. "ciep³o" dla temperatury powy¿ej 20 stopni Celsjusza, "ch³odno" dla temperatury poni¿ej 10 stopni Celsjusza itd.)*/
 void task16()
 {
@@ -342,12 +343,14 @@ void task16()
 
 
 
+
 /*Pêtla do-while:
 1. Program pytaj¹cy u¿ytkownika o has³o i wyœwietlaj¹cy komunikat "has³o poprawne" lub "has³o niepoprawne" dopóki u¿ytkownik nie poda poprawnego has³a (np. "abc123").
 2. Program wyœwietlaj¹cy na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.) dopóki suma tych kwadratów nie przekroczy 1000*/
 
 void task_1()
 {
+
     string password;
 
 
@@ -392,14 +395,162 @@ void task_3()
 /*2. Program obliczaj¹cy sumê liczb od 1 do 100*/
 void task_4()
 {
-    int c;
-    int b;
-    int a;
-
-    for (int c=a; c<=b; c++)
-    {
-        cout<<a<<endl;
+    int sum = 0;
+    for (int i = 1; i <= 100; i++) {
+        sum += i;
     }
+    cout << "Suma liczb od 1 do 100 wynosi: " << sum <<endl;
+}
+//Program wyœwietlaj¹cy na ekranie kwadraty liczb od 1 do 10 (np. 1, 4, 9, 16 itd.)
+void task_5()
+{
+    int sum=0;
+
+    for (int i=1;i<11;i++)
+    {
+        sum = i * i;
+        cout << i * i << endl;
+
+    }
+}
+void task_6()
+//4. Program wyœwietlaj¹cy na ekranie silnie z liczb od 1 do 10 (np. 1!, 2!, 3!, 4! itd.)
+{
+
+    for(int i=1;i<11;i++)
+    {
+        cout<<i<<"!"<<endl;
+    }
+}
+void task_7()
+//5. Program wyœwietlaj¹cy na ekranie tabliczkê mno¿enia od 1 do 9 (np. 1x1=1, 1x2=2, 1x3=3 itd.).
+{
+    for(int i=1;i<10;i++)
+    {
+        cout<<"1 * "<<i<<" = "<<1*i<<endl;
+        cout<<"2 * "<<i<<" = "<<2*i<<endl;
+        cout<<"3 * "<<i<<" = "<<3*i<<endl;
+        cout<<"4 * "<<i<<" = "<<4*i<<endl;
+        cout<<"5 * "<<i<<" = "<<5*i<<endl;
+        cout<<"6 * "<<i<<" = "<<6*i<<endl;
+        cout<<"7 * "<<i<<" = "<<7*i<<endl;
+        cout<<"8 * "<<i<<" = "<<8*i<<endl;
+        cout<<"9 * "<<i<<" = "<<9*i<<endl;
+
+    }
+}
+void task_8()
+//Program wyœwietlaj¹cy na ekranie wszystkie liczby podzielne przez 3 z zakresu od 1 do 100
+{
+    int liczba;
+    for(int i=1;i>101;i++)
+    {
+        if(i%3)
+        {
+            cout<<i<<endl;
+        }
+    }
+}
+//void task_9
+//void task_10
+//8. Program wyœwietlaj¹cy na ekranie ci¹g Fibonacciego do 20 elementu (ci¹g Fibonacciego to ci¹g gdzie ka¿dy element jest sum¹ dwóch poprzednich, np. 0, 1, 1, 2, 3, 5, 8, 13 itd.)
+void task_11()
+{
+    int fib[20];
+
+    fib[0]=1;
+    fib[1]=1;
+
+    for(int i=2;i<21;i++)
+    {
+        fib[i]=fib[i-1]+fib[i-2];
+        cout<<fib[i]<<endl;
+    }
+}
+//9. Program wyœwietlaj¹cy na ekranie kolejne potêgi 2 od 2^0 do 2^10 (np. 2^0, 2^1, 2^2 itd.)
+
+void task_12()
+{
+    for(int i=0;i<11;i++)
+    {
+        cout<<"2^"<<i<<endl;
+    }
+}
+//
+void task_13()
+//10. Program wyœwietlaj¹cy na ekranie kolejne elementy ci¹gu a_n = a_{n-1} + a_{n-2}, gdzie a_0=1, a_1=1 (ci¹g ten zaczyna siê od 1, 1, 2, 3, 5, 8, 13 itd.).
+{
+    long double  ele[100000];
+    int n;
+
+    cout<<"Ile elementow mam wyznaczyc:";
+    cin>>n;
+
+    ele[0]=1;
+    ele[1]=1;
+
+    for(int i=2;i<n;i++)
+    {
+        ele[i]=ele[i-1]+ele[i-2];
+        cout<<ele[i]<<endl;
+    }
+
+}
+
+/*Pêtle:
+1. Program sprawdzaj¹cy czy podana liczba jest liczb¹ pierwsz¹ (czyli tak¹, która dzieli siê tylko przez 1 i przez siebie sam¹)
+2. Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem (czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+3. Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
+4. Program sprawdzaj¹cy czy podana liczba jest liczb¹ doskona³¹ (czyli tak¹, której suma dzielników (z wy³¹czeniem samej siebie) jest równa danej liczbie,
+np. 6 jest liczb¹ doskona³¹, poniewa¿ 1 + 2 + 3 = 6).*/
+
+void task_14()
+//1. Program sprawdzaj¹cy czy podana liczba jest liczb¹ pierwsz¹ (czyli tak¹, która dzieli siê tylko przez 1 i przez siebie sam¹)
+{
+    bool c = true;
+    int n,p;
+    cin>>n;
+    for(p = 2;p*p<=n;p++)
+    {
+        if(n%p==0)
+        {
+            cout<<"liczba zlozona";
+            c = false;
+            break;
+        }
+        if(c==true) cout<<"Liczba pierwsza"<<endl;
+    }
+
+
+    //2. Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
+void task_15()
+{
+    string slowo;
+    int i, j;
+
+    cout << "Podaj wyraz,chcesz sprawdzic: "<< endl;
+    cin >> slowo;
+
+    for (i = 0, j = slowo.length() - 1; i < j; i++, j--)
+    {
+        if (slowo[i] != slowo[j])
+            break;
+    }
+    if (i < j)
+        cout << "Podany wyraz nie jest palindronem" << endl;
+    else
+        cout << "Podany wyraz jest palindronem" << endl;
+}
+//3. Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
+
+void task_16()
+{
+    string slowo;
+    int i, j;
+
+    cout << "Podaj wyraz do sprawdzenia: " << endl;
+    cin >> slowo;
+    for(i=0,j )
 }
 int main()
 {
@@ -420,40 +571,20 @@ int main()
     //task14();
     //task15();
     //task16();
-    //task17();
     //task_1();
     //task_2();
     //task_3();
-    task_4();
-
-}
-//2. Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
-void task6()
-{
-    string slowo;
-    int i, j;
-
-    cout << "Podaj wyraz,chcesz sprawdzic: "<< endl;
-    cin >> slowo;
-
-    for (i = 0, j = slowo.length() - 1; i < j; i++, j--)
-    {
-        if (slowo[i] != slowo[j])
-            break;
-    }
-    if (i < j)
-        cout << "Podany wyraz nie jest palindronem" << endl;
-    else
-        cout << "Podany wyraz jest palindronem" << endl;
-}
-//3. Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
-
-void task7()
-{
-    string slowo;
-    int i, j;
-
-    cout << "Podaj wyraz do sprawdzenia: " << endl;
-    cin >> slowo;
-    for(i=0,j )
+    //task_4();
+    //task_5();
+    //task_6();
+    //task_7();
+    //task_8();
+    //task_9();
+    //task_10();
+    //task_11();
+    //task_12();
+    //task_13();
+    //task_14();
+    //task_15();
+    task_16();
 }
