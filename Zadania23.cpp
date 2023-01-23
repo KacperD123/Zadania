@@ -60,6 +60,9 @@ Dla zaawansowanych:
 #include <conio.h>
 #include <math.h>
 #include <cmath>
+#include<string.h>
+#include <unordered_set>
+
 
 using namespace std;
 
@@ -521,7 +524,7 @@ void task_14()
         if(c==true) cout<<"Liczba pierwsza"<<endl;
     }
 
-
+}
     //2. Program sprawdzaj¹cy czy podany ci¹g znaków jest palindromem(czyli takim, który czytany od ty³u jest taki sam, jak czytany od przodu, np. "kajak")
 void task_15()
 {
@@ -543,14 +546,121 @@ void task_15()
 }
 //3. Program sprawdzaj¹cy czy podane dwa s³owa s¹ anagramami (czyli takimi, które zawieraj¹ te same litery, ale w innym uk³adzie, np. "klasa" i "salka")
 
-void task_16()
-{
-    string slowo;
-    int i, j;
+//7. Program obliczaj¹cy sumê kwadratów liczb od 1 do 10
+    void task_17()
+    {
+        int suma = 0;
+        int i = 1;
+        int j = 2;
+        int k = 3;
+        int l = 4;
+        int z = 5;
+        int x = 6;
+        int c = 7;
+        int v = 8;
+        int b = 9;
+        int n = 10;
 
-    cout << "Podaj wyraz do sprawdzenia: " << endl;
-    cin >> slowo;
-    for(i=0,j )
+
+        for (; i,j,k,l,z,x,c,v,b < 10;i,j,k,l,z,x,c,v,b++)
+        {
+            cout<<"Suma kwadratow liczb od 1 do 10 wynosi: "<<(i*i)+(j*j)+(k*k)+(l*l)+(z*z)+(x*x)+(c*c)+(v*v)+(b*b)+(n*n)<<endl;
+        }
+    }
+/*
+1. Program implementuj¹cy algorytm szyfrowania Cezara (proste szyfrowanie, w którym ka¿dy znak w tekœcie jest zastêpowany innym znakiem, przesuniêtym o sta³¹ liczbê pozycji w alfabecie).
+2. Program obliczaj¹cy najwiêkszy wspólny dzielnik (NWD) dwóch liczb
+3. Program obliczaj¹cy najmniejsz¹ wspóln¹ wielokrotnoœæ (NWW) dwóch liczb.
+4. Program wyci¹gaj¹cy informacje z numeru PESEL
+5. Napisz program, który pobiera od u¿ytkownika ci¹g znaków i wyœwietla liczbê samog³osek i spó³g³osek w tym ci¹gu.
+*/
+//2.Program NWD
+int NWD(int a, int b)
+{
+    while(a!=b)
+       if(a>b)
+           a=a-b;
+       else
+           b=b-a;
+    return a; // lub b - obie zmienne przechowują wynik NWD(a,b)
+}
+void task_18()
+{
+    int a,b;
+
+    cout<<"Podaj 1 liczbe"<<endl;
+    cin>>a;
+    cout<<"Podaj 2 liczbe"<<endl;
+    cin>>b;
+
+    cout<<"NWD("<<a<<","<<b<<") = "<<NWD(a,b)<<endl;
+
+}
+//3.Program NWW
+void task_19()
+{
+    unsigned int a,b;
+    cout<<"Podaj 1 liczbe"<<endl;
+    cin>>a;
+    cout<<"Podaj 2 liczbe"<<endl;
+    cin>>b;
+
+    cout<<"NWW("<<a<<", "<<b<<") = "<<a/NWD(a,b)*b<<endl;
+
+}
+//1 Program wyciągający informacje z numeru pesel
+void szyfrowanie(int klucz,char tab[])
+{
+    int dl = strlen(tab);
+
+    if(!(klucz >= -26&& klucz <=26)) return;
+
+    if(klucz >=0)
+    {
+        for(int i=0;i<dl;i++)
+        if(tab[i] + klucz <='z')
+        {
+            tab[i]+=klucz;
+        }
+        else
+        {
+            tab[i] = tab[i] + klucz - 26;
+        }
+    }
+    else
+    {
+        for(int i=0;i<dl;i++)
+        if(tab[i] + klucz >='a')
+        {
+            tab[i]+= klucz;
+        }
+        else
+        {
+            tab[i] = tab[i] + klucz + 26;
+        }
+    }
+
+}
+void task_20()
+{
+    char tab[1001];
+
+    int klucz;
+
+    cout<<"Podaj wyraz skladajacy sie z malych liter: ";
+    cin>>tab;
+
+    cout<<"Podaj klucz z przedzialu [-26..26]: ";
+    cin>>klucz;
+
+    szyfrowanie(klucz,tab); //szyfrowanie
+
+    cout<<"Po zaszyfrowaniu: "<<tab<<endl;
+
+    szyfrowanie(-klucz,tab); //deszyfrowanie
+
+    cout<<"Po rozszyfrowaniu: "<<tab<<endl;
+
 }
 int main()
 {
@@ -586,5 +696,9 @@ int main()
     //task_13();
     //task_14();
     //task_15();
-    task_16();
+    //task_16();
+    //task_17();
+    //task_18();
+    //task_19();
+    task_20();
 }
