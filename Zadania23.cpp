@@ -662,6 +662,58 @@ void task_20()
     cout<<"Po rozszyfrowaniu: "<<tab<<endl;
 
 }
+//7. Napisz grê kó³ko i krzy¿yk.
+void task_21() {
+
+    int number;
+    string znak[20];
+    znak[0] = "[_]";
+    znak[1] = "[_]";
+    znak[2] = "[_]";
+    znak[3] = "[_]";
+    znak[4] = "[_]";
+    znak[5] = "[_]";
+    znak[6] = "[_]";
+    znak[7] = "[_]";
+    znak[8] = "[_]";
+    znak[9] = "[X]";
+    znak[10] = "[O]";
+
+
+    
+    for (int i = 0; i <= 3; i++)
+    {
+        cout << znak[i];
+        if (i == 2)
+        {
+            cout << endl;
+        }
+    }
+    for (int i = 2; i < 6; i++)
+    {
+        cout << znak[i]<<endl;
+        if (i == 6)
+        {
+            cout << endl;
+        }
+
+    }
+    for (int i = 6; i < 9; i++)
+    {
+        cout << znak[i] << endl;
+        if (i == 9)
+        {
+            cout << endl;
+        }
+
+    }
+    
+
+    cout << "Jestes X! Podaj numer kratki w ktorej chcesz wstawic X" << endl;
+    cin >> number;
+    
+
+}
 int main()
 {
 
@@ -700,5 +752,6 @@ int main()
     //task_17();
     //task_18();
     //task_19();
-    task_20();
+    //task_20();
+    task_21();
 }
