@@ -666,6 +666,7 @@ void task_20()
 void task_21() {
 
     int number;
+    int secondnumber;
     string znak[20];
     znak[0] = "[_]";
     znak[1] = "[_]";
@@ -679,9 +680,88 @@ void task_21() {
     znak[9] = "[X]";
     znak[10] = "[O]";
 
+    for (int i = 1; i <= 9; i++)
+    {
+        
 
-    
-    for (int i = 0; i <= 3; i++)
+
+        if (i == 2 || i == 4 || i == 6 || i == 8)
+        {
+            cout << "Jestes O! Podaj number kratki w której chcesz wstawic O" << endl;
+            cin >> secondnumber;
+        }
+        else
+        {
+            cout << "Jestes X! Podaj numer kratki w ktorej chcesz wstawic X" << endl;
+            cin >> number;
+        }
+
+
+    switch (number) {
+    case 1:
+        znak[0] = "[X]";
+        break;
+    case 2:
+        znak[1] = "[X]";
+        break;
+    case 3:
+        znak[2] = "[X]";
+        break;
+    case 4:
+        znak[3] = "[X]";
+        break;
+    case 5:
+        znak[4] = "[X]";
+        break;
+    case 6:
+        znak[5] = "[X]";
+        break;
+    case 7:
+        znak[6] = "[X]";
+        break;
+    case 8:
+        znak[7] = "[X]";
+        break;
+    case 9:
+        znak[8] = "[X]";
+        break;
+    }
+
+    switch (secondnumber) {
+    case 1:
+        znak[0] = "[O]";
+        break;
+    case 2:
+        znak[1] = "[O]";
+        break;
+    case 3:
+        znak[2] = "[O]";
+        break;
+    case 4:
+        znak[3] = "[O]";
+        break;
+    case 5:
+        znak[4] = "[O]";
+        break;
+    case 6:
+        znak[5] = "[O]";
+        break;
+    case 7:
+        znak[6] = "[O]";
+        break;
+    case 8:
+        znak[7] = "[O]";
+        break;
+    case 9:
+        znak[8] = "[O]";
+        break;
+    }
+
+ 
+
+
+
+    for (int i = 0; i <= 2; i++)
     {
         cout << znak[i];
         if (i == 2)
@@ -689,28 +769,30 @@ void task_21() {
             cout << endl;
         }
     }
-    for (int i = 2; i < 6; i++)
+    for (int i = 3; i <= 5; i++)
     {
-        cout << znak[i]<<endl;
-        if (i == 6)
+        cout << znak[i];
+        if (i == 5)
         {
             cout << endl;
         }
 
     }
-    for (int i = 6; i < 9; i++)
+    for (int i = 6; i <= 8; i++)
     {
-        cout << znak[i] << endl;
-        if (i == 9)
+        cout << znak[i];
+        if (i == 8)
         {
             cout << endl;
         }
 
     }
-    
 
-    cout << "Jestes X! Podaj numer kratki w ktorej chcesz wstawic X" << endl;
-    cin >> number;
+
+}
+   
+
+
     
 
 }
