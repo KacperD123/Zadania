@@ -790,7 +790,121 @@ void task_21() {
 
 
 }
-   
+ 
+void task_21() {
+
+    int number = 0;
+    int secondnumber = 0;
+    string znak[20];
+    znak[0] = "[_]";
+    znak[1] = "[_]";
+    znak[2] = "[_]";
+    znak[3] = "[_]";
+    znak[4] = "[_]";
+    znak[5] = "[_]";
+    znak[6] = "[_]";
+    znak[7] = "[_]";
+    znak[8] = "[_]";
+    znak[9] = "[X]";
+    znak[10] = "[O]";
+
+    for (int i = 1; i <= 9; i++)
+    {
+        
+
+
+        if(i%2 == 0)
+        {
+            cout << "Jestes O! Podaj number kratki w ktorej chcesz wstawic O" << endl;
+            cin >> secondnumber;
+        }
+        else
+        {
+            cout << "Jestes X! Podaj numer kratki w ktorej chcesz wstawic X" << endl;
+            cin >> number;
+        }
+
+
+
+    //Dla X
+    switch (number) {
+    case 1:
+        znak[0] = "[X]";
+        break;
+    case 2:
+        znak[1] = "[X]":
+        break;
+    case 3:
+        znak[2] = "[X]";
+        break;
+    case 4:
+        znak[3] = "[X]";
+        break;
+    case 5:
+        znak[4] = "[X]";
+        break;
+    case 6:
+        znak[5] = "[X]";
+        break;
+    case 7:
+        znak[6] = "[X]";
+        break;
+    case 8:
+        znak[7] = "[X]";
+        break;
+    case 9:
+        znak[8] = "[X]";
+        break;
+    }
+    // Dla O 
+    switch (secondnumber) {
+    case 1:
+        znak[0] = "[O]";
+        break;
+    case 2:
+        znak[1] = "[O]";
+        break;
+    case 3:
+        znak[2] = "[O]";
+        break;
+    case 4:
+        znak[3] = "[O]";
+        break;
+    case 5:
+        znak[4] = "[O]";
+        break;
+    case 6:
+        znak[5] = "[O]";
+        break;
+    case 7:
+        znak[6] = "[O]";
+        break;
+    case 8:
+        znak[7] = "[O]";
+        break;
+    case 9:
+        znak[8] = "[O]";
+        break;
+    }
+
+    kratki(); // Wyświetlanie pola
+
+
+    if (znak[0] == znak[9] && znak[1] == znak[9] && znak[2] == znak[9])
+    {
+        cout << "Wygrales";
+        kratki();
+        break;
+    }
+    
+    
+
+    
+
+    
+
+}
+  
 
 
     
